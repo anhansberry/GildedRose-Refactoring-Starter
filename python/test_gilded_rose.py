@@ -55,6 +55,27 @@ class GildedRoseTest(unittest.TestCase):
         gilded_rose.update_quality()
         self.assertEquals(4, items[0].sell_in)
 
+class GildedRoseTest(unittest.TestCase):
+    def test_foo(self):
+        items = [Item("Conjured Stick", 5, 5)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(3, items[0].quality)
+
+class GildedRoseTest(unittest.TestCase):
+    def test_foo(self):
+        items = [Item("Conjured Stick", -3, 5)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(1, items[0].quality)
+
+class GildedRoseTest(unittest.TestCase):
+    def test_foo(self):
+        items = [Item("Conjured Aged Brie", -3, 5)]
+        gilded_rose = GildedRose(items)
+        gilded_rose.update_quality()
+        self.assertEquals(7, items[0].quality)
+
 
 
         
